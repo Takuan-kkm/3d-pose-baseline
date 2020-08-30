@@ -182,6 +182,7 @@ def load_stacked_hourglass(data_dir, subjects, actions):
                         seqname = seqname + '-sh'
                         data[(subj, action, seqname)] = poses_final
 
+
             # Make sure we loaded 8 sequences
             if (subj == 11 and action == 'Directions'):  # <-- this video is damaged
                 assert loaded_seqs == 7, "Expecting 7 sequences, found {0} instead. S:{1} {2}".format(loaded_seqs, subj,

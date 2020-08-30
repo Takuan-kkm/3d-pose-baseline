@@ -205,6 +205,7 @@ def train():
                 step_loss, loss_summary, lr_summary, _ = model.step(sess, enc_in, dec_out, FLAGS.dropout,
                                                                     isTraining=True)
 
+
                 if (i + 1) % log_every_n_batches == 0:
                     # Log and print progress every log_every_n_batches batches
                     model.train_writer.add_summary(loss_summary, current_step)
